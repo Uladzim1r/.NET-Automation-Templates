@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefitClientTemplate", "src\RefitClientTemplate\RefitClientTemplate.csproj", "{614D4630-DE76-40A0-8ED2-2F2566C91FDF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestAPI", "src\SystemUnderTest\RestAPI\RestAPI.csproj", "{23B2B043-B125-40D2-8B09-E94DFEC6FC7A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SystemUnderTest", "SystemUnderTest", "{4019CB33-908A-487E-BC08-A7E39DDE719D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,12 @@ Global
 		{614D4630-DE76-40A0-8ED2-2F2566C91FDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{614D4630-DE76-40A0-8ED2-2F2566C91FDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{614D4630-DE76-40A0-8ED2-2F2566C91FDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23B2B043-B125-40D2-8B09-E94DFEC6FC7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23B2B043-B125-40D2-8B09-E94DFEC6FC7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23B2B043-B125-40D2-8B09-E94DFEC6FC7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23B2B043-B125-40D2-8B09-E94DFEC6FC7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{23B2B043-B125-40D2-8B09-E94DFEC6FC7A} = {4019CB33-908A-487E-BC08-A7E39DDE719D}
 	EndGlobalSection
 EndGlobal
