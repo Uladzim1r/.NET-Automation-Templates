@@ -6,6 +6,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestAPI", "src\SystemUnderT
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SystemUnderTest", "SystemUnderTest", "{4019CB33-908A-487E-BC08-A7E39DDE719D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "QuestionMvcApplication", "QuestionMvcApplication", "{7EA60F4F-F867-4667-B760-67D26B68096A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestionsAnswers.Application", "src\SystemUnderTest\QuestionMvcApplication\QuestionsAnswers.Application\QuestionsAnswers.Application.csproj", "{F16C95A5-4949-4A4C-BB7A-A6795BA98E4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestionsAnswers.Core", "src\SystemUnderTest\QuestionMvcApplication\QuestionsAnswers.Core\QuestionsAnswers.Core.csproj", "{6A614A36-09D3-4897-9EBB-7E95F84983EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestionsAnswers.EntityFrameworkCore", "src\SystemUnderTest\QuestionMvcApplication\QuestionsAnswers.EntityFrameworkCore\QuestionsAnswers.EntityFrameworkCore.csproj", "{FE9AA3A5-5A39-4845-AED7-1A31AD60AE06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestionsAnswers.Migrator", "src\SystemUnderTest\QuestionMvcApplication\QuestionsAnswers.Migrator\QuestionsAnswers.Migrator.csproj", "{EB903801-EC87-457D-AAC8-363704EEF186}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestionsAnswers.Web", "src\SystemUnderTest\QuestionMvcApplication\QuestionsAnswers.Web\QuestionsAnswers.Web.csproj", "{71ABEE90-82D2-499C-977A-C9F11B513373}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +32,34 @@ Global
 		{23B2B043-B125-40D2-8B09-E94DFEC6FC7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23B2B043-B125-40D2-8B09-E94DFEC6FC7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23B2B043-B125-40D2-8B09-E94DFEC6FC7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F16C95A5-4949-4A4C-BB7A-A6795BA98E4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F16C95A5-4949-4A4C-BB7A-A6795BA98E4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F16C95A5-4949-4A4C-BB7A-A6795BA98E4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F16C95A5-4949-4A4C-BB7A-A6795BA98E4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A614A36-09D3-4897-9EBB-7E95F84983EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A614A36-09D3-4897-9EBB-7E95F84983EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A614A36-09D3-4897-9EBB-7E95F84983EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A614A36-09D3-4897-9EBB-7E95F84983EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE9AA3A5-5A39-4845-AED7-1A31AD60AE06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE9AA3A5-5A39-4845-AED7-1A31AD60AE06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE9AA3A5-5A39-4845-AED7-1A31AD60AE06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE9AA3A5-5A39-4845-AED7-1A31AD60AE06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB903801-EC87-457D-AAC8-363704EEF186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB903801-EC87-457D-AAC8-363704EEF186}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB903801-EC87-457D-AAC8-363704EEF186}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB903801-EC87-457D-AAC8-363704EEF186}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71ABEE90-82D2-499C-977A-C9F11B513373}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71ABEE90-82D2-499C-977A-C9F11B513373}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71ABEE90-82D2-499C-977A-C9F11B513373}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71ABEE90-82D2-499C-977A-C9F11B513373}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{23B2B043-B125-40D2-8B09-E94DFEC6FC7A} = {4019CB33-908A-487E-BC08-A7E39DDE719D}
+		{7EA60F4F-F867-4667-B760-67D26B68096A} = {4019CB33-908A-487E-BC08-A7E39DDE719D}
+		{F16C95A5-4949-4A4C-BB7A-A6795BA98E4D} = {7EA60F4F-F867-4667-B760-67D26B68096A}
+		{6A614A36-09D3-4897-9EBB-7E95F84983EB} = {7EA60F4F-F867-4667-B760-67D26B68096A}
+		{FE9AA3A5-5A39-4845-AED7-1A31AD60AE06} = {7EA60F4F-F867-4667-B760-67D26B68096A}
+		{EB903801-EC87-457D-AAC8-363704EEF186} = {7EA60F4F-F867-4667-B760-67D26B68096A}
+		{71ABEE90-82D2-499C-977A-C9F11B513373} = {7EA60F4F-F867-4667-B760-67D26B68096A}
 	EndGlobalSection
 EndGlobal
