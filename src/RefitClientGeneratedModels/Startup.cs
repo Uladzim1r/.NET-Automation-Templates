@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using RefitClientTemplate.Json.AppSettings;
+using RefitClientGeneratedModels.Json.AppSettings;
 
-namespace RefitClientTemplate;
+namespace RefitClientGeneratedModels;
 
 public class Startup
 {
