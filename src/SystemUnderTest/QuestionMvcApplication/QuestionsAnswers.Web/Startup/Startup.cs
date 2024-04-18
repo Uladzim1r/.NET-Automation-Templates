@@ -14,20 +14,20 @@ using QuestionsAnswers.Identity;
 using QuestionsAnswers.Web.Authentication.JwtBearer;
 using QuestionsAnswers.Web.Configuration;
 using System;
+using System.Linq;
 using Microsoft.OpenApi.Models;
 
 namespace QuestionsAnswers.Web.Startup
 {
     public class Startup
     {
-    
         private readonly IWebHostEnvironment _hostingEnvironment;
         private readonly IConfigurationRoot _appConfiguration;
+
         public Startup(IWebHostEnvironment env)
         {
             _hostingEnvironment = env;
             _appConfiguration = env.GetAppConfiguration();
-
         }
 
         public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -46,7 +46,8 @@ namespace QuestionsAnswers.Web.Startup
 
             services.AddSwaggerGen(options =>
             {
-                options.SwaggerDoc("v1", new OpenApiInfo { Title = "AbpZeroTemplate API", Version = "v1" });
+                options.SwaggerDoc("v1", new OpenApiInfo { Title = "Question MVC API", Version = "v1" });
+                options.SupportNonNullableReferenceTypes();
                 options.DocInclusionPredicate((docName, description) => true);
             });
 
@@ -64,7 +65,7 @@ namespace QuestionsAnswers.Web.Startup
                         _hostingEnvironment.IsDevelopment()
                             ? "log4net.config"
                             : "log4net.Production.config"
-                        )
+                    )
                 );
             });
         }
@@ -91,8 +92,8 @@ namespace QuestionsAnswers.Web.Startup
             //Enable middleware to serve swagger - ui assets(HTML, JS, CSS etc.)
             app.UseSwaggerUI(options =>
             {
-                options.SwaggerEndpoint("/swagger/v1/swagger.json", "AbpZeroTemplate API V1");
-            }); //URL: /swagger 
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Question MVC API");
+            }); //URL: /swagger
 
             app.UseJwtTokenMiddleware();
 
