@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefitClientTemplate", "src\RefitClientTemplate\RefitClientTemplate.csproj", "{614D4630-DE76-40A0-8ED2-2F2566C91FDF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefitClientGeneratedModels", "src\RefitClientGeneratedModels\RefitClientGeneratedModels.csproj", "{614D4630-DE76-40A0-8ED2-2F2566C91FDF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestAPI", "src\SystemUnderTest\RestAPI\RestAPI.csproj", "{23B2B043-B125-40D2-8B09-E94DFEC6FC7A}"
 EndProject
