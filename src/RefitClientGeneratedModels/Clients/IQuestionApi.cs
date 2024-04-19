@@ -1,12 +1,16 @@
 using Refit;
+using RefitClientGeneratedModels.Authorization;
 using RefitClientTemplate.GeneratedModels;
 
 namespace RefitClientGeneratedModels.Clients;
 
+[Headers("Content-Type", "application/json")]
+[ActAs(Roles.User)]
 public interface IQuestionApi
 {
     [Get("/api/services/app/Question/GetQuestions")]
-    Task<QuestionDtoPagedResultDto> GetQuestionsAsync([Query] int maxResultCount, [Query] int skipCount, [Query] string sorting);
+    Task<QuestionDtoPagedResultDto> GetQuestionsAsync([Query] int maxResultCount = 20, [Query] int skipCount = 0,
+        [Query] string? sorting = null);
 
     [Post("/api/services/app/Question/CreateQuestion")]
     Task CreateQuestionAsync([Body] CreateQuestionInput input);

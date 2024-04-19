@@ -1,8 +1,11 @@
 using Refit;
+using RefitClientGeneratedModels.Authorization;
 using RefitClientTemplate.GeneratedModels;
 
 namespace RefitClientGeneratedModels.Clients;
 
+[Headers("Content-Type", "application/json")]
+[ActAs(Roles.Administrator)]
 public interface ITenantApi
 {
     [Post("/api/services/app/Tenant/Create")]

@@ -3,7 +3,7 @@ using Castle.Windsor.MsDependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 using QuestionsAnswers.Identity;
 
-namespace QuestionsAnswers.DependencyInjection
+namespace QuestionsAnswers.Migrator.DependencyInjection
 {
     public static class ServiceCollectionRegistrar
     {

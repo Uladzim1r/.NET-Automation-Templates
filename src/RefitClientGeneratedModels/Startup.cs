@@ -1,5 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
+using Refit;
+using RefitClientGeneratedModels.Clients;
 using RefitClientGeneratedModels.Json.AppSettings;
 
 namespace RefitClientGeneratedModels;
@@ -17,6 +20,26 @@ public class Startup
 
         services.AddSingleton<IConfiguration>(configurationBuilder.Build());
 
+        services.AddOptions<AuthSetting>().BindConfiguration(nameof(AuthSetting));
         services.AddOptions<EndpointSetting>().BindConfiguration(nameof(EndpointSetting));
+
+        services.AddConfiguredRefitHttpClient<IQuestionApi>((provider, client) =>
+        {
+            var requiredService = provider.GetRequiredService<IOptions<EndpointSetting>>().Value;
+            client.BaseAddress = new Uri(requiredService.Url);
+        });
+
+        services.AddRefitClient<IAuthorizationClient>()
+            .ConfigureHttpClient((provider, client) =>
+            {
+                var requiredService = provider.GetRequiredService<IOptions<AuthSetting>>().Value;
+                client.BaseAddress = new Uri(requiredService.Url);
+            });
+
+        services.AddConfiguredRefitHttpClient<ITenantApi>((provider, client) =>
+        {
+            var requiredService = provider.GetRequiredService<IOptions<EndpointSetting>>().Value;
+            client.BaseAddress = new Uri(requiredService.Url);
+        });
     }
 }

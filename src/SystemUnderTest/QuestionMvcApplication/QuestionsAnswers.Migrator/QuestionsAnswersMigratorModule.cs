@@ -4,8 +4,8 @@ using Abp.Reflection.Extensions;
 using Castle.MicroKernel.Registration;
 using Microsoft.Extensions.Configuration;
 using QuestionsAnswers.Configuration;
-using QuestionsAnswers.DependencyInjection;
 using QuestionsAnswers.EntityFrameworkCore;
+using QuestionsAnswers.Migrator.DependencyInjection;
 
 namespace QuestionsAnswers.Migrator
 {
